@@ -1,0 +1,28 @@
+Ciao Ragazzi, vi spiego brevemente come funziona il gioco:
+
+Nel mondo ci sono solo due elementi: il Bloop e il Food.
+I Bloop sono le palle che camminano e mangiano i Food.
+
+I Bloop hanno una salute di 1000 punti. Ogni volta che mangiano viene incrementata di 100. Se va a zero il Bloop muore.
+
+I Bloop sono mossi da una rete neurale mostrata nell'immagine "brain.png". Gli input della rete neurale sono la distanza sull'asse X e la distanza sull'asse Y dal cibo più vicino. Mentre gli output sono i comandi di movimento su, giu, destra, sinistra.
+
+Tutti i pesi di questa rete formano il DNA del singolo Bloop, che rappresenta il suo modo di interagire con il mondo.
+Inoltre nel DNA c'è un ulteriore numerello che indica la grandezza del Bloop e quindi anche la sua velocità di movimento.
+
+All'inizio tutti i Bloop sono istanziati in maniera casuale e come vedete nel video molti non sanno muoversi o lo fanno in modo non corretto.
+
+RIPRODUZIONE
+La riproduzione è asessuata in ogni istante ogni Bloop ha una possibilità piccola di riprodursi, se il Bloop però non ha abbastanza salute non si può riprodurre. Quelli che possono riprodursi hanno un contorno verde.
+Quindi più un Bloop mangia e sopravvive più probabilità ha di riprodursi.
+Riproducendosi creano un Bloop con lo stesso DNA ma con qualche mutazione di qualche gene o peso della rete neurale.
+Quello che accade è che dopo varie generazioni nel mondo sono presenti solo Bloop in grado di mangiare, e sono sempre più bravi a farlo.
+Il video mostra solo qualche minuto di evoluzione, ma se mandato avanti per molto tempo migliorano. 
+
+A un certo punto però non migliorano più perchè il mondo è molto limitato e non c'è nulla da imparare...
+
+
+E' quindi un esempio di Rete Neurale addestrata tramite selezione naturale (algoritmo genetico).
+La cosa interessante sarebbe come rendere questo (che credo sia comunque un T2) renderlo un T3?
+
+

@@ -1,12 +1,18 @@
+import com.hamoid.*; //Lib esportazione video.
+VideoExport videoExport;
 
 World myworld; 
+
+boolean videoOn = false; //Flag per registrare video
 
 void setup() {
 	
 	size(1000, 600);
 
+	videoExport = new VideoExport(this, "neural.mp4");
+
 	//Initialize my world:
-	myworld = new World(10, 15);
+	myworld = new World(15, 50);
 }
 
 void draw() {
@@ -14,11 +20,24 @@ void draw() {
 
 	//Run my world
 	myworld.run();
+
+	//Export video
+	if(videoOn) videoExport.saveFrame();
 }
 
+//Mouse clicked
 void mouseClicked(){
 	myworld.addBloops();
 }
+
+//Key pressed
+void keyPressed(){
+	if (key == 'r'){
+		videoOn = true;
+		println("start recording.... ");
+	}
+}
+
 
 
 
@@ -52,9 +71,9 @@ class World {
 			bloops.get(i).eat(foods);  //Bloop eating
 			bloops.get(i).display();  //Bloop display
 
-			
+
 			if( bloops.get(i).health > 800 ){  //Bloop reproduction
-				if( random(1) < 0.0015 ){
+				if( random(1) < 0.0013 ){
 					bloops.get(i).health -= 100;
 					bloops.add( bloops.get(i).reproduce(bloopsCount++) );  
 				}
@@ -72,7 +91,7 @@ class World {
 		}
 
 		//Add some foods:
-		if(random(1) < 0.02){
+		if(random(1) < 0.05){
 			foods.add( new Food() );
 		}
 	}

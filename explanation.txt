@@ -1,0 +1,27 @@
+English Translation from spiegazione.txt
+"Hello Guys, I explain briefly how the game works:
+
+In the world there are only two elements: the Bloop and Food.
+The Bloop(the balls) walk and eat the food.
+
+The Bloop have a health of 1000 points. Every time they eat is increased by 100. If it goes to zero Bloop dies.
+
+The Bloop are moved by a neural network shown in the image "brain.png". The inputs of the neural network are the distance along the X axis and the distance on the Y axis from the nearest food. While the outputs are the movement commands up, down, right, left.
+
+All the weights of the network form the DNA of the individual Bloop, which is his way of interacting with the world.
+Also in the DNA it is a further numerello that indicates the magnitude of the Bloop and therefore its speed of movement.
+
+At first all Bloop they are instantiated at random and as you can see in the video many do not know how to move or do incorrectly.
+
+REPRODUCTION
+Reproduction is asexual in every moment every Bloop has a small chance to reproduce, however, whether the Bloop is not healthy enough you can not play. Those who can breed have a green outline.
+Therefore more a Bloop eats and survives more likely has to reproduce.
+Reproducing create a Bloop with the same DNA but with some mutation of any gene or weight of the neural network.
+What happens is that after several generations in the world there are only Bloop able to eat, and they are increasingly good at it.
+The video shows only a few minutes of evolution, but if sent on for a long time improves.
+
+At some point, however, they do not improve more because the world is very limited and there is nothing to learn ...
+
+
+[This is] therefore an example of a Neural Network trained through natural selection (genetic algorithm).
+The interesting thing would be how to make this (which I think is still a T2) make it a T3?"
